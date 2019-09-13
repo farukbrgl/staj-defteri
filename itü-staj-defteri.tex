@@ -1,0 +1,172 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ %%
+%% Rahman ve Rahîm olan Allah'ın adıyla	 						%%
+%% In the name of Allah, the Most Gracious, the Most Merciful	%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% İTÜ Staj Defteri Taslağı
+%%
+%% LaTeX Template
+%%
+%% Ömer Faruk Birgül
+%% birgulo@itu.edu.tr
+%%
+%% Bu taslak aşağıdaki adreste bulunan
+%% yönetmeliğe göre hazırlanmıştır.
+%% http://www.sis.itu.edu.tr/tr/yonetmelik/StajGenelEsaslari.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bu taslak Texmaker 5.0.3 ile oluşturulmuş ve denenmiştir.
+%% Quick Build ve PDFLaTex ile denenmiştir.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Kağıt ve yazı boyutu ayarları
+\documentclass[12pt,a4paper]{report}
+\special{papersize=210mm,297mm}
+%% Kağıt ve yazı boyutu ayarları sonu
+
+%% Türkçe dil paketleri
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+%% Türkçe dil paketleri sonu
+
+%% Times New Roman font
+\usepackage{mathptmx}
+%% Metinleri denemek için Lorem Ipsum
+\usepackage{lipsum}
+%% Sayfa kenarlığı ayarları
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+%% Tablolar ile ilgili paket
+\usepackage{array} 
+%% Resim ekleme ile ilgili paketler
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+%% Programlama dili kodları ile ilgili paketler. Kodları yazdığınız dile göre renklendirme ve girintileme yapar.
+%% Raporunuzda kod bulunmuyorsa bu kısımları silebilirsiniz.
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+		language=C, % Dili buradan değiştirebilirsiniz
+		aboveskip=3mm,
+		belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\small\ttfamily},
+		numbers=none,
+		numberstyle=\tiny\color{gray},
+		keywordstyle=\color{blue},
+		commentstyle=\color{dkgreen},
+		stringstyle=\color{mauve},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=3}
+%% Kod paketleri sonu
+
+\begin{document}  
+
+%% PDF için bilgiler. Metinde gözükmez, belge özellklerinde gözükür.
+\pdfinfo{   /Author (Ömer Faruk Birgül)
+   			/Title  (itu staj defteri)
+   			/CreationDate (D:20190913090400)
+   			/Subject (Staj)
+  			/Keywords (Staj;Taslak;Defter;ITU)
+		}
+%% PDF için bilgiler sonu
+
+%% İçindekiler sayfası.
+%% \addcontentsline{toc}{subsection}{"Buraya Yapılan Uygulama Yazılacak"}
+%% Buradaki yazılar gözükecek.
+\tableofcontents
+
+%% Sayfa altbilgi ayarları. Gerekmedikçe değiştirmeyin.
+\mbox{}
+\vfill
+\begin{center}
+\begin{tabular}{|>{\centering}m{3.6cm}|>{\centering}m{7.4cm}|>{\centering}m{4cm}|}
+ÖĞRENCİ&ONAY&FİRMA YETKİLİSİ
+\tabularnewline
+imza &&imza
+\end{tabular}
+\end{center}
+%% Sayfa altbilgi ayarları sonu.
+\newpage
+\chapter*{Şirket Hakkında Bilgi}
+
+\paragraph{} Buraya şirket hakkında bilgiler yazılacak.
+\paragraph{} Şirket hakkında daha fazla bilgi.
+%% Sayfa altbilgi ayarları. Gerekmedikçe değiştirmeyin.
+\mbox{}
+\vfill
+\begin{center}
+\begin{tabular}{|>{\centering}m{3.6cm}|>{\centering}m{7.4cm}|>{\centering}m{4cm}|}
+ÖĞRENCİ&ONAY&FİRMA YETKİLİSİ
+\tabularnewline
+imza &&imza
+\end{tabular}
+\end{center}
+%% Sayfa altbilgi ayarları sonu.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Günlük defter sayfaları. Her gün için bir tane kopyalayıp yeni sayfa oluşturun. %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage %yeni sayfa
+ 
+%% Sayfa üstbilgi ayarları. Tırnak içindeki yerleri kendi bilgilerinizle değiştirin.
+%% Eğer yazılar boşluklara sığmazsa uzunluklarla oynayın.
+\begin{center}
+\begin{tabular}{llr}
+\parbox[c]{5cm}{Yapılan Uygulama}
+&\parbox[c]{8cm}{"Buraya Yapılan Uygulama Yazılacak"} % Tırnak işareti ile birlikte kendi bilginizle değiştirin.
+\addcontentsline{toc}{subsection}{"Buraya Yapılan Uygulama Yazılacak"} % Tırnak işareti ile birlikte kendi bilginizle değiştirin.
+&\parbox[c]{3cm}{GG.AA.YYYY}%Tarih
+\\
+\parbox[c]{5cm}{Uygulamanın Yapıldığı Birim}
+&\parbox[c]{8cm}{"Buraya Yapılan Birim Yazılacak"} % Tırnak işareti ile birlikte kendi bilginizle değiştirin.
+\end{tabular}
+\end{center}
+%% Sayfa üstbilgi ayarları sonu.
+
+\paragraph{} Stajda yapılan işler yazılacak.
+\paragraph{} Daha fazla iş.
+
+%% Resim ekleme
+\shorthandoff{=} % Bu satırı silmeyiniz. Türkçe dili ile \includegraphics arasında sorun çıkıyor.
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{black}
+    \caption{Siyah logo}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.4\linewidth}
+    \includegraphics[width=\linewidth]{blue}
+    \caption{Mavi logo}
+  \end{subfigure}
+  \caption{İki farklı renkte İTÜ logosu}
+  \label{fig:coffee}
+\end{figure}
+\shorthandoff{=} % Bu satırı silmeyiniz. Türkçe dili ile \includegraphics arasında sorun çıkıyor.
+%% Resim ekleme sonu
+
+%% Sayfa altbilgi ayarları. Gerekmedikçe değiştirmeyin.
+\mbox{}
+\vfill
+\begin{center}
+\begin{tabular}{|>{\centering}m{3.6cm}|>{\centering}m{7.4cm}|>{\centering}m{4cm}|}
+ÖĞRENCİ&ONAY&FİRMA YETKİLİSİ
+\tabularnewline
+imza&&imza
+\end{tabular}
+\end{center}
+%% Sayfa altbilgi ayarları sonu.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Günlük defter sayfaları sonu.                                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
